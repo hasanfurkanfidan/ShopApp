@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShopApp.Entities
 {
-   public class Product
+   public class Product:IEntity
     {
         public int Id { get; set; }
 
@@ -13,5 +13,9 @@ namespace ShopApp.Entities
         public string ImageUrl { get; set; }
 
         public decimal Price { get; set; }
+
+        public List<ProductCategory> ProductCategories { get; set; }
+
+
     }
 }
