@@ -10,3 +10,5 @@ Yapılanlar
 3)EfCore projenin DataAccess katmanına dahil edildi.
 
 4)Generic Repository projenin DataAccess katmanına eklendi.
+
+5)Business Layer projeye eklendi.
