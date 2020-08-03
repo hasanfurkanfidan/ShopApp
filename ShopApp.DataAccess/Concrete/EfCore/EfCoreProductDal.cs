@@ -8,36 +8,7 @@ using System.Text;
 
 namespace ShopApp.DataAccess.Concrete.EfCore
 {
-    class EfCoreProductDal : IProductDal
+    class EfCoreProductDal : EfCoreGenericRepository<Product>,IProductDal
     {
-        public void Create(Product entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(Product entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IQueryable<Product> GetAll(Expression<Func<Product, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Product GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Product GetOne(Expression<Func<Product, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Product entity)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
