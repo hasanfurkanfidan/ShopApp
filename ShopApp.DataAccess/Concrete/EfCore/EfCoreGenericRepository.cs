@@ -31,17 +31,17 @@ namespace ShopApp.DataAccess.Concrete.EfCore
             }
         }
 
-        public IQueryable<T> GetAll(Expression<Func<T, bool>> filter)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter)
         {
             using (var context = new ShopContext())
             {
                 if (filter == null)
                 {
-                    return  context.Set<T>().ToList().AsQueryable();
+                    return context.Set<T>().ToList();
                 }
                 else
                 {
-                    return  context.Set<T>().Where(filter).ToList().AsQueryable();
+                    return context.Set<T>().Where(filter).ToList();
                 }
             }
         }

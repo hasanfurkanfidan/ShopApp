@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShopApp.DataAccess.Abstract
+namespace ShopApp.Business.Abstract
 {
-   public interface ICategoryDal:IGenericDal<Category>
+   public interface IProductService:IGenericService<Product>
     {
     }
 }
