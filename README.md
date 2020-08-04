@@ -12,3 +12,5 @@ Yapılanlar
 4)Generic Repository projenin DataAccess katmanına eklendi.
 
 5)Business Layer projeye eklendi.
+
+6)İlk migration ve Seed Database metodu projeye eklendi.
