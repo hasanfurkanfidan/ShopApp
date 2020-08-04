@@ -24,10 +24,11 @@ namespace ShopApp.WebUI
             services.AddScoped<IProductDal, EfCoreProductDal>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICategoryDal, EfCoreCategoryDal>();
-            services.AddScoped<IOrderService, OrderManager>();
-            services.AddScoped<IOrderDal, EfOrderDal>();
+           
+            
 
 
+            services.AddControllersWithViews();
 
         }
 
@@ -36,17 +37,17 @@ namespace ShopApp.WebUI
         {
             if (env.IsDevelopment())
             {
+
                 app.UseDeveloperExceptionPage();
+                SeedDatabase.Seed();
             }
 
             app.UseRouting();
-
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
