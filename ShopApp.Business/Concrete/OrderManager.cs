@@ -7,11 +7,11 @@ using System.Text;
 
 namespace ShopApp.Business.Concrete
 {
-    public class OrderManager : IOrderDal
+    public class OrderManager : IOrderService
     {
-        private readonly IOrderDal _orderDal;
+        private readonly IOrderService _orderDal;
 
-        public OrderManager(IOrderDal orderDal)
+        public OrderManager(IOrderService orderDal)
         {
             _orderDal = orderDal;
         }

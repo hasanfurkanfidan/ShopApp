@@ -8,7 +8,7 @@ using System.Text;
 
 namespace ShopApp.DataAccess.Concrete.EfCore
 {
-    class EfCoreProductDal : EfCoreGenericRepository<Product>,IProductDal
+   public class EfCoreProductDal : EfCoreGenericRepository<Product>,IProductDal
     {
     }
 }

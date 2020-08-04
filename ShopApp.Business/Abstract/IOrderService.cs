@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ShopApp.Business.Abstract
 {
-   public interface IOrderDal:IGenericService<Order>
+   public interface IOrderService:IGenericService<Order>
     {
     }
 }
