@@ -1,21 +1,23 @@
 ﻿@model ShopApp.WebUI.Models.ProductListViewModel
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
+<div class="row mt-xl-5">
+    <div class="col-md-3" >
+        <ul class="list-group ">
+            <li class="list-group-item">Telefon</li>
+            <li class="list-group-item">Bilgisayar</li>
+            <li class="list-group-item">Elektronik</li>
+        </ul>
+    </div>
+    <div class="col-md-9">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-   
-</head>
-<body>
-    <a href="/modules/bootstrap/dist/css/bootstrap.min.css">aaa</a>
-    @foreach(var item in Model.Products)
-    {
-        <p>@item.ProductName</p>
-    }
-</body>
-</html>
+        <partial name="_slider" />
+
+        <div class="row">
+            @foreach (var product in Model.Products)
+            {
+                <partial name="_product" for="@product" />
+            }
+        </div>
+
+    </div>
+</div>
